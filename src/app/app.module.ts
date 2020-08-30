@@ -3,6 +3,11 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import{SharedservicebondsService}from './bonds/shared/sharedservicebonds.service';
+import{HttpClientModule} from '@angular/common/http';
+import{FormsModule,ReactiveFormsModule} from '@angular/forms';
+import{BondsModule}from './bonds/bonds.module';
+import{EquitiesModule}from './equities/equities.module';
 
 @NgModule({
   declarations: [
@@ -10,9 +15,14 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
+    BondsModule,
+    EquitiesModule
   ],
-  providers: [],
+  providers: [SharedservicebondsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

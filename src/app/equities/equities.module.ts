@@ -11,6 +11,12 @@ import { EquityformComponent } from './equityform/equityform.component';
   declarations: [EquitytileComponent, EquityuploadComponent, EquityshowComponent, EquityformComponent],
   imports: [
     CommonModule
+  ],
+  exports :[
+    EquitytileComponent,
+     EquityuploadComponent, 
+     EquityshowComponent,
+      EquityformComponent
   ]
 })
 export class EquitiesModule { }
