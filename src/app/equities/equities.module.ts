@@ -21,7 +21,12 @@ import {EquityService} from '../services/equity.service';
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule
-
+  ],
+  exports :[
+    EquitytileComponent,
+     EquityuploadComponent, 
+     EquityshowComponent,
+      EquityformComponent
   ]
 })
 export class EquitiesModule { }

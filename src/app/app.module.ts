@@ -3,7 +3,15 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import{SharedservicebondsService}from './bonds/shared/sharedservicebonds.service';
+import{HttpClientModule} from '@angular/common/http';
+import{FormsModule,ReactiveFormsModule} from '@angular/forms';
+import{BondsModule}from './bonds/bonds.module';
+import{EquitiesModule}from './equities/equities.module';
+
 
 @NgModule({
   declarations: [
@@ -13,8 +21,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
+    BondsModule,
+    EquitiesModule
   ],
-  providers: [],
+  providers: [SharedservicebondsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
