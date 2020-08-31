@@ -1,28 +1,41 @@
 import { Injectable } from '@angular/core';
 
 import {HttpClient}from '@angular/common/http';
-import {observable, Observable}from 'rxjs';
+import {Observable}from 'rxjs/Observable';
+import 'rxjs/add/operator/map';
+import{securityequity}from '../shared/securityequity.model';
 
-
-@Injectable({
+@Injectable(
+  {
   providedIn: 'root'
-})
+  }
+)
+
 export class SharedserviceequityService {
 
-  readonly Equityurl="https://localhost:44362/api/equity";
+  readonly equityUrl="https://localhost:44362/api/equity";
+  formdata:securityequity;
+  equitylist:securityequity[];
+
   constructor(public http:HttpClient) { }
 
-  bondselect():Observable<any[]>{
-    return this.http.get<any>(this.Equityurl);
+  equitySelect():Observable<securityequity[]>{
+    return this.http.get<securityequity[]>(this.equityUrl);
   }
-  bondupdate(val:any){
-    return this.http.put(this.Equityurl,val);
+  refreshequitylist(){
+    this.equitySelect().subscribe(data=>{
+      this.equitylist=data;
+    })
   }
-  bondadd(val:any){
-    return this.http.post(this.Equityurl,val);
+
+  equityUpdate(formdata:securityequity){
+    return this.http.put(this.equityUrl,formdata);
   }
-  bonddelete(val:any){
-    return this.http.delete(this.Equityurl+'/'+val);
+  equityAdd(val:any){
+    return this.http.post(this.equityUrl,val);
+  }
+  equityDelete(id:number){
+    return this.http.delete(this.equityUrl+'/'+id);
   }
   
 }

@@ -1,0 +1,31 @@
+<p>equity works!</p>
+<!-- <table class="table table-hover">
+   
+    <tr *ngFor="let equityitem of service.equitylist">
+        <td>{{equityitem.ID}}</td>
+        <td>{{bonditem.SecurityName}}</td>
+        <td>{{equityitem.SecurityDescription}}</td>
+        <td> <button (click="populateform(equityitem)")>Update</button></td>
+       <td> <button (click="deleteitem(equityitem.ID)") >Delete</button></td>
+    </tr>
+</table> -->
+
+
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" mat-Sort>
+        <ng-container matColumnDef="ID">
+            <th mat-header-cell *matHearderCellDef mat-sort-header>ID</th>
+            <td mat-cell *matCellDef="let equityitem">{{equityitem.ID}}</td>
+        </ng-container>
+        <ng-container matColumnDef="Security Name">
+            <th mat-header-cell *matHearderCellDef mat-sort-header>SecurityName</th>
+            <td mat-cell *matCellDef="let equityitem">{{equityitem.SecurityName}}</td>
+         </ng-container>
+         <ng-container matColumnDef="Security Description">
+            <th mat-header-cell *matHearderCellDef mat-sort-header>SecurityDescription</th>
+            <td mat-cell *matCellDef="let equityitem">{{equityitem.SecurityDescription}}</td>
+         </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef ="let row;columns:displayedColumns;"></tr>
+    </table>
+    

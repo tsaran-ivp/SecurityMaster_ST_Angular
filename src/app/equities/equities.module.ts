@@ -8,10 +8,10 @@ import {MatTableModule} from '@angular/material/table';
 import {HttpClientModule} from '@angular/common/http';
 import {BrowserModule} from '@angular/platform-browser';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-
+import {SharedserviceequityService} from './shared/sharedserviceequity.service';
 
 @NgModule({
-
+  providers:[SharedserviceequityService],
   declarations: [EquitytileComponent, EquityuploadComponent, EquityshowComponent, EquityformComponent],
   imports: [
     CommonModule,
