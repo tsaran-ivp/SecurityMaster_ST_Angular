@@ -1,1 +1,13 @@
 <p>bondshow works!</p>
+<table class="table table-hover">
+    <tr *ngFor="let bonditem of service.bondlist">
+        <td>{{bonditem.ID}}</td>
+        <td>{{bonditem.SecurityDescription}}</td>
+        <td>{{bonditem.SecurityName}}</td>
+        <td>{{bonditem.AssetType}}</td>
+        <td>{{bonditem.InvestmentType}}</td>
+        <td> <button (click="populateform(bonditem)")>Update</button></td>
+       <td> <button (click="deleteitem(bonditem.ID)") >Delete</button></td>
+    </tr>
+
+</table>

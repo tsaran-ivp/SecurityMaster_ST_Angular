@@ -1,1 +1,203 @@
-<p>bondform works!</p>
+<form #form="ngForm" (submit)="onSubmit(form)" autocomplete="off">
+<div class="form-group">
+<div class="row">
+    <div class="col-3">
+        <label>id</label>
+        <input type="text" name="ID" #ID="ngModel" [(ngModel)]="service.formdata.ID" class="form-control" readonly="readonly">   
+    </div>
+    <div class="col-3">
+        <label>SecurityDescription</label>
+        <input type="text" name="SecurityDescription" #SecurityDescription="ngModel" [(ngModel)]="service.formdata.SecurityDescription" class="form-control" readonly="readonly">   
+    </div>
+    <div class="col-3">
+        <label>SecurityName</label>
+        <input type="text" name="SecurityName" #SecurityName="ngModel" [(ngModel)]="service.formdata.SecurityName" class="form-control" readonly="readonly">   
+    </div>
+    <div class="col-3">
+        <label>AssetType</label>
+        <input type="text" name="AssetType" #AssetType="ngModel" [(ngModel)]="service.formdata.AssetType" class="form-control" readonly="readonly">   
+    </div><div class="col-3">
+        <label>InvestmentType</label>
+        <input type="text" name="InvestmentType" #InvestmentType="ngModel" [(ngModel)]="service.formdata.InvestmentType" class="form-control" readonly="readonly">   
+    </div><div class="col-3">
+        <label>TradingFactor</label>
+        <input type="text" name="TradingFactor" #TradingFactor="ngModel" [(ngModel)]="service.formdata.TradingFactor" class="form-control" readonly="readonly">   
+    </div><div class="col-3">
+        <label>PricingFactor</label>
+        <input type="text" name="PricingFactor" #PricingFactor="ngModel" [(ngModel)]="service.formdata.PricingFactor" class="form-control" readonly="readonly">   
+    </div><div class="col-3">
+        <label>ISIN</label>
+        <input type="text" name="ISIN" #ISIN="ngModel" [(ngModel)]="service.formdata.ISIN" class="form-control" readonly="readonly">   
+    </div><div class="col-3">
+        <label>BBGTicker</label>
+        <input type="text" name="BBGTicker" #BBGTicker="ngModel" [(ngModel)]="service.formdata.BBGTicker" class="form-control" readonly="readonly">   
+    </div><div class="col-3">
+        <label>BBGUniqueID</label>
+        <input type="text" name="BBGUniqueID" #BBGUniqueID="ngModel" [(ngModel)]="service.formdata.BBGUniqueID" class="form-control" readonly="readonly">   
+    </div><div class="col-3">
+        <label>SEDOL</label>
+        <input type="text" name="SEDOL" #SEDOL="ngModel" [(ngModel)]="service.formdata.SEDOL" class="form-control" readonly="readonly">   
+    </div><div class="col-3">
+        <label>FirstCouponDate</label>
+        <input type="text" name="FirstCouponDate" #FirstCouponDate="ngModel" [(ngModel)]="service.formdata.FirstCouponDate" class="form-control" readonly="readonly">   
+    </div><div class="col-3">
+        <label>Cap</label>
+        <input type="text" name="Cap" #Cap="ngModel" [(ngModel)]="service.formdata.Cap" class="form-control" readonly="readonly">   
+    </div><div class="col-3">
+        <label>FloorValue</label>
+        <input type="text" name="FloorValue" #FloorValue="ngModel" [(ngModel)]="service.formdata.FloorValue" class="form-control" readonly="readonly">   
+    </div><div class="col-3">
+        <label>CouponFrequency</label>
+        <input type="text" name="CouponFrequency" #CouponFrequency="ngModel" [(ngModel)]="service.formdata.CouponFrequency" class="form-control" readonly="readonly">   
+    </div><div class="col-3">
+        <label>Coupon</label>
+        <input type="text" name="Coupon" #Coupon="ngModel" [(ngModel)]="service.formdata.Coupon" class="form-control" readonly="readonly">   
+    </div><div class="col-3">
+        <label>CouponType</label>
+        <input type="text" name="CouponType" #CouponType="ngModel" [(ngModel)]="service.formdata.CouponType" class="form-control" readonly="readonly">   
+    </div><div class="col-3">
+        <label>Spread</label>
+        <input type="text" name="Spread" #Spread="ngModel" [(ngModel)]="service.formdata.Spread" class="form-control" readonly="readonly">   
+    </div><div class="col-3">
+        <label>CallableFlag</label>
+        <input type="text" name="CallableFlag" #CallableFlag="ngModel" [(ngModel)]="service.formdata.CallableFlag" class="form-control" readonly="readonly">   
+    </div><div class="col-3">
+        <label>FixtoFloatFlag</label>
+        <input type="text" name="FixtoFloatFlag" #FixtoFloatFlag="ngModel" [(ngModel)]="service.formdata.FixtoFloatFlag" class="form-control" readonly="readonly">   
+    </div><div class="col-3">
+        <label>PutableFlag</label>
+        <input type="text" name="PutableFlag" #PutableFlag="ngModel" [(ngModel)]="service.formdata.PutableFlag" class="form-control" readonly="readonly">   
+    </div><div class="col-3">
+        <label>IssueDate</label>
+        <input type="text" name="IssueDate" #IssueDate="ngModel" [(ngModel)]="service.formdata.IssueDate" class="form-control" readonly="readonly">   
+    </div><div class="col-3">
+        <label>LastResetDate</label>
+        <input type="text" name="LastResetDate" #LastResetDate="ngModel" [(ngModel)]="service.formdata.LastResetDate" class="form-control" readonly="readonly">   
+    </div><div class="col-3">
+        <label>Maturity</label>
+        <input type="text" name="Maturity" #Maturity="ngModel" [(ngModel)]="service.formdata.Maturity" class="form-control" readonly="readonly">   
+    </div><div class="col-3">
+        <label>CallNotificationMaxDays</label>
+        <input type="text" name="CallNotificationMaxDays" #CallNotificationMaxDays="ngModel" [(ngModel)]="service.formdata.CallNotificationMaxDays" class="form-control" readonly="readonly">   
+    </div><div class="col-3">
+        <label>PutNotificationMaxDays</label>
+        <input type="text" name="PutNotificationMaxDays" #PutNotificationMaxDays="ngModel" [(ngModel)]="service.formdata.PutNotificationMaxDays" class="form-control" readonly="readonly">   
+    </div><div class="col-3">
+        <label>PenultimateCouponDate</label>
+        <input type="text" name="PenultimateCouponDate" #PenultimateCouponDate="ngModel" [(ngModel)]="service.formdata.PenultimateCouponDate" class="form-control" readonly="readonly">   
+    </div><div class="col-3">
+        <label>ResetFrequency</label>
+        <input type="text" name="ResetFrequency" #ResetFrequency="ngModel" [(ngModel)]="service.formdata.ResetFrequency" class="form-control" readonly="readonly">   
+    </div><div class="col-3">
+        <label>HasPosition</label>
+        <input type="text" name="HasPosition" #HasPosition="ngModel" [(ngModel)]="service.formdata.HasPosition" class="form-control" readonly="readonly">   
+    </div><div class="col-3">
+        <label>Volatility_30D</label>
+        <input type="text" name="Volatility_30D" #Volatility_30D="ngModel" [(ngModel)]="service.formdata.Volatility_30D" class="form-control" readonly="readonly">   
+    </div><div class="col-3">
+        <label>Volatility_90D</label>
+        <input type="text" name="Volatility_90D" #Volatility_90D="ngModel" [(ngModel)]="service.formdata.Volatility_90D" class="form-control" readonly="readonly">   
+    </div><div class="col-3">
+        <label>Convexity</label>
+        <input type="text" name="Convexity" #Convexity="ngModel" [(ngModel)]="service.formdata.Convexity" class="form-control" readonly="readonly">   
+    </div><div class="col-3">
+        <label>AverageVolume_30Day</label>
+        <input type="text" name="AverageVolume_30Day" #AverageVolume_30Day="ngModel" [(ngModel)]="service.formdata.AverageVolume_30Day" class="form-control" readonly="readonly">   
+    </div><div class="col-3">
+        <label>PFAssetClass</label>
+        <input type="text" name="PFAssetClass" #PFAssetClass="ngModel" [(ngModel)]="service.formdata.PFAssetClass" class="form-control" readonly="readonly">   
+    </div><div class="col-3">
+        <label>PFCountry</label>
+        <input type="text" name="PFCountry" #PFCountry="ngModel" [(ngModel)]="service.formdata.PFCountry" class="form-control" readonly="readonly">   
+    </div><div class="col-3">
+        <label>PFCreditRating</label>
+        <input type="text" name="PFCreditRating" #PFCreditRating="ngModel" [(ngModel)]="service.formdata.PFCreditRating" class="form-control" readonly="readonly">   
+    </div><div class="col-3">
+        <label>PFCurrency</label>
+        <input type="text" name="PFCurrency" #PFCurrency="ngModel" [(ngModel)]="service.formdata.PFCurrency" class="form-control" readonly="readonly">   
+    </div><div class="col-3">
+        <label>PFInstrument</label>
+        <input type="text" name="PFInstrument" #PFInstrument="ngModel" [(ngModel)]="service.formdata.PFInstrument" class="form-control" readonly="readonly">   
+    </div><div class="col-3">
+        <label>PFLiquidityProfile</label>
+        <input type="text" name="PFLiquidityProfile" #PFLiquidityProfile="ngModel" [(ngModel)]="service.formdata.PFLiquidityProfile" class="form-control" readonly="readonly">   
+    </div><div class="col-3">
+        <label>PFMaturity</label>
+        <input type="text" name="PFMaturity" #PFMaturity="ngModel" [(ngModel)]="service.formdata.PFMaturity" class="form-control" readonly="readonly">   
+    </div><div class="col-3">
+        <label>PFNAICSCode</label>
+        <input type="text" name="PFNAICSCode" #PFNAICSCode="ngModel" [(ngModel)]="service.formdata.PFNAICSCode" class="form-control" readonly="readonly">   
+    </div><div class="col-3">
+        <label>PFRegion</label>
+        <input type="text" name="PFRegion" #PFRegion="ngModel" [(ngModel)]="service.formdata.PFRegion" class="form-control" readonly="readonly">   
+    </div><div class="col-3">
+        <label>PFSector</label>
+        <input type="text" name="PFSector" #PFSector="ngModel" [(ngModel)]="service.formdata.PFSector" class="form-control" readonly="readonly">   
+    </div><div class="col-3">
+        <label>PFSubAssetClass</label>
+        <input type="text" name="PFSubAssetClass" #PFSubAssetClass="ngModel" [(ngModel)]="service.formdata.PFSubAssetClass" class="form-control" readonly="readonly">   
+    </div><div class="col-3">
+        <label>BloombergIndustryGroup</label>
+        <input type="text" name="BloombergIndustryGroup" #BloombergIndustryGroup="ngModel" [(ngModel)]="service.formdata.BloombergIndustryGroup" class="form-control" readonly="readonly">   
+    </div><div class="col-3">
+        <label>BloombergIndustrySubGroup</label>
+        <input type="text" name="BloombergIndustrySubGroup" #BloombergIndustrySubGroup="ngModel" [(ngModel)]="service.formdata.BloombergIndustrySubGroup" class="form-control" readonly="readonly">   
+    </div><div class="col-3">
+        <label>BloombergIndustrySector</label>
+        <input type="text" name="BloombergIndustrySector" #BloombergIndustrySector="ngModel" [(ngModel)]="service.formdata.BloombergIndustrySector" class="form-control" readonly="readonly">   
+    </div>
+    <div class="col-3">
+        <label>CountryofIssuance</label>
+        <input type="text" name="CountryofIssuance" #CountryofIssuance="ngModel" [(ngModel)]="service.formdata.CountryofIssuance" class="form-control" readonly="readonly">   
+    </div><div class="col-3">
+        <label>IssueCurrency</label>
+        <input type="text" name="IssueCurrency" #IssueCurrency="ngModel" [(ngModel)]="service.formdata.IssueCurrency" class="form-control" readonly="readonly">   
+    </div><div class="col-3">
+        <label>IssuerName</label>
+        <input type="text" name="IssuerName" #IssuerName="ngModel" [(ngModel)]="service.formdata.IssuerName" class="form-control" readonly="readonly">   
+    </div><div class="col-3">
+        <label>RiskCurrency</label>
+        <input type="text" name="RiskCurrency" #RiskCurrency="ngModel" [(ngModel)]="service.formdata.RiskCurrency" class="form-control" readonly="readonly">   
+    </div><div class="col-3">
+        <label>PutDate</label>
+        <input type="text" name="PutDate" #PutDate="ngModel" [(ngModel)]="service.formdata.PutDate" class="form-control" readonly="readonly">   
+    </div><div class="col-3">
+        <label>PutPrice</label>
+        <input type="text" name="PutPrice" #PutPrice="ngModel" [(ngModel)]="service.formdata.PutPrice" class="form-control" readonly="readonly">   
+    </div><div class="col-3">
+        <label>AskPrice</label>
+        <input type="text" name="AskPrice" #AskPrice="ngModel" [(ngModel)]="service.formdata.AskPrice" class="form-control" readonly="readonly">   
+    </div>
+    <div class="col-3">
+        <label>HighPrice</label>
+        <input type="text" name="HighPrice" #HighPrice="ngModel" [(ngModel)]="service.formdata.HighPrice" class="form-control" readonly="readonly">   
+    </div><div class="col-3">
+        <label>LowPrice</label>
+        <input type="text" name="LowPrice" #LowPrice="ngModel" [(ngModel)]="service.formdata.LowPrice" class="form-control" readonly="readonly">   
+    </div><div class="col-3">
+        <label>OpenPrice</label>
+        <input type="text" name="OpenPrice" #OpenPrice="ngModel" [(ngModel)]="service.formdata.OpenPrice" class="form-control" readonly="readonly">   
+    </div><div class="col-3">
+        <label>Volume</label>
+        <input type="text" name="Volume" #Volume="ngModel" [(ngModel)]="service.formdata.Volume" class="form-control" readonly="readonly">   
+    </div><div class="col-3">
+        <label>BidPrice</label>
+        <input type="text" name="BidPrice" #BidPrice="ngModel" [(ngModel)]="service.formdata.BidPrice" class="form-control" readonly="readonly">   
+    </div><div class="col-3">
+        <label>LastPrice</label>
+        <input type="text" name="LastPrice" #LastPrice="ngModel" [(ngModel)]="service.formdata.LastPrice" class="form-control" readonly="readonly">   
+    </div><div class="col-3">
+        <label>CallDate</label>
+        <input type="text" name="CallDate" #CallDate="ngModel" [(ngModel)]="service.formdata.CallDate" class="form-control" readonly="readonly">   
+    </div><div class="col-3">
+        <label>CallPrice</label>
+        <input type="text" name="CallPrice" #CallPrice="ngModel" [(ngModel)]="service.formdata.CallPrice" class="form-control" readonly="readonly">   
+    </div>
+</div>
+
+
+<br><br>
+<button type="submit" class="btn btn-lg btn-block btn-info">submit</button>
+</div>
+
+</form>
