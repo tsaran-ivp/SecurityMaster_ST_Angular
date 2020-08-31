@@ -3,12 +3,12 @@ import { Injectable } from '@angular/core';
 import {HttpClient}from '@angular/common/http';
 import {Observable}from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
-import{securityequity}from '../shared/securityequity.model';
+import{securityequity} from '../shared/securityequity.model';
 
 @Injectable(
-  {
-  providedIn: 'root'
-  }
+{
+  providedIn:'root'
+}
 )
 
 export class SharedserviceequityService {

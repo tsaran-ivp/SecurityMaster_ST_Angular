@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import{SharedserviceequityService}from './equities/shared/sharedserviceequity.service';
 import{SharedservicebondsService}from './bonds/shared/sharedservicebonds.service';
 import{HttpClientModule} from '@angular/common/http';
 import{FormsModule,ReactiveFormsModule} from '@angular/forms';
@@ -27,7 +27,7 @@ import{EquitiesModule}from './equities/equities.module';
     BondsModule,
     EquitiesModule
   ],
-  providers: [SharedservicebondsService],
+  providers: [SharedservicebondsService,SharedserviceequityService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

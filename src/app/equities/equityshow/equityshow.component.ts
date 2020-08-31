@@ -23,18 +23,18 @@ export class EquityshowComponent implements OnInit {
   }
 
   
-  // populateform(equityitem :securityequity){
-  //   this.service.formdata=Object.assign({},equityitem);
+  populateform(equityitem :securityequity){
+    this.service.formdata=Object.assign({},equityitem);
 
-  // }
-  // deleteitem(id:number){
-  //   if(confirm('are u sure u wanna delete?')){
-  //     this.service.equityDelete(id).subscribe(res=>{
-  //       alert("deleted successfully");
-  //       this.service.refreshequitylist();
-  //     })
-  //   }
-  // }
+  }
+  deleteitem(id:number){
+    if(confirm('are u sure u wanna delete?')){
+      this.service.equityDelete(id).subscribe(res=>{
+        alert("deleted successfully");
+        this.service.refreshequitylist();
+      })
+    }
+  }
 
 }
 

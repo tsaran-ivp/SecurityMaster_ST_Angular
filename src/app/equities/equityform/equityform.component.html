@@ -1,1 +1,53 @@
 <p>equityform works!</p>
+<mat-card>    
+  <!-- Title of an Card -->    
+  <mat-card-title>    
+      Equity Update Form
+  </mat-card-title>    
+  
+  <mat-card-content>    
+      <form  #form="ngForm" (submit)="onSubmit(form)" autocomplete="off">    
+          <table>    
+              <tr>    
+                  <td>    
+                      <mat-form-field class="form-full-width">    
+                        <input matInput type="text" placeholder="ID" name="ID" #ID="ngModel" [(ngModel)]="service.formdata.ID" class="form-control" readonly="readonly">   
+                      </mat-form-field>    
+                  </td>    
+                  <td>    
+                      <mat-form-field class="form-full-width">    
+                        <input matInput type="text" name="SecurityDescription" #SecurityDescription="ngModel" [(ngModel)]="service.formdata.SecurityDescription" class="form-control" readonly="readonly">   
+                  </mat-form-field>    
+                  </td>    
+              </tr>    
+              <tr>    
+                  <td colspan="2" >    
+                      <mat-form-field class="form-full-width">
+                        <input matInput type="text" name="SecurityName" #SecurityName="ngModel" [(ngModel)]="service.formdata.SecurityName" class="form-control" >   
+                      </mat-form-field>    
+                  </td>    
+              </tr>    
+              <tr>    
+                  <!-- <td colspan="2">    
+                      <mat-form-field >    
+                          <input matInput [matDatepicker]="picker" placeholder="Date of birth">    
+                          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>    
+                          <mat-datepicker touchUi="true" #picker></mat-datepicker>    
+                      </mat-form-field>    
+                  </td>     -->
+              </tr>    
+                  
+              <tr>    
+                  <td colspan="2" class="content-center">  
+                     <button type="submit" mat-raised-button  color="accent">submit</button> <br>
+                      
+                       
+                  </td>  
+                  <td colspan="2" class="content-center">
+                    <button mat-raised-button color="grey">Clear</button>  
+                  </td>  
+              </tr>    
+          </table>    
+      </form>    
+  </mat-card-content>    
+</mat-card> 
